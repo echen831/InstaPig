@@ -1,0 +1,83 @@
+.grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    margin-left: 500px;
+    flex-wrap: wrap;
+    height: 336px;
+    width: 336px;
+}
+
+.pad {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:aqua;
+    border: 1px solid black;
+    border-radius: 15px;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blanchedalmond;
+    border: 1px solid black;
+    border-radius: 15px;
+    font-size: large;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    /* margin-right: 10px;
+    margin-bottom: 10px; */
+}
+
+.pad:hover {
+    background-color: cadetblue;
+}
+
+.board {
+    display: block;
+    border: 1px solid black;
+    position: relative;
+}
+
+.circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 25px;
+    height: 25px;
+    background-color: lightblue;
+}
+
+.basket-head {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    width: 100px;
+    height: 300px;
+    border: 1px solid black;
+}
+
+.basket {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+}
+
+.fruit {
+    width: 25px;
+    height: 25px;
+}
+
+.fruit-list {
+    cursor: pointer;
+}
