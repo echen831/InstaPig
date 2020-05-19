@@ -27,22 +27,27 @@ document.addEventListener('DOMContentLoaded', ()=> {
     circle.style.left = parseInt(board.style.width) / 2;
     circle.style.top = parseInt(board.style.height) / 2;
 
+    const randPos = () => {
+        let rand = Math.floor(Math.random() * 15);
+        return rand * 25
+    }
+
 
     apple.style.position = 'absolute';
-    apple.style.left = 0;
-    apple.style.top = 0;
+    apple.style.left = randPos();
+    apple.style.top = randPos();
 
     mango.style.position = 'absolute';
-    mango.style.left = 125;
-    mango.style.top = 0;
+    mango.style.left = randPos();
+    mango.style.top = randPos();
 
     orange.style.position = 'absolute';
-    orange.style.left = 250;
-    orange.style.top = 0;
+    orange.style.left = randPos();
+    orange.style.top = randPos();
 
     banana.style.position = 'absolute';
-    banana.style.left = 375;
-    banana.style.top = 0;
+    banana.style.left = randPos();
+    banana.style.top = randPos();
 
 
 
