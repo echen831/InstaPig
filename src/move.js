@@ -1,31 +1,6 @@
-export const addList = (str) => {
-    let basket = document.getElementById('basket')
-    let list = document.createElement('li')
-    list.setAttribute('class', 'fruit-list')
-    let fruit = document.createTextNode(str)
-    list.appendChild(fruit)
-    basket.appendChild(list)
-}
-
-export const addFruit = () => {
+import * as Util from './util'
 
 
-    if ((circle.style.left === apple.style.left) && (circle.style.top === apple.style.top)) {
-        addList('🍎');
-    }
-
-    if ((circle.style.left === mango.style.left) && (circle.style.top === mango.style.top)) {
-        addList('🥭');
-    }
-
-    if ((circle.style.left === orange.style.left) && (circle.style.top === orange.style.top)) {
-        addList('🍊');
-    }
-
-    if ((circle.style.left === banana.style.left) && (circle.style.top === banana.style.top)) {
-        addList('🍌');
-    }
-}
 
 
 export const move = (e) => {
@@ -37,7 +12,7 @@ export const move = (e) => {
             } else {
                 circle.style.left = 0
             }
-            addFruit()
+            Util.addFruit()
             break;
         case 39:
             if (parseInt(circle.style.left) + 25 < 400) {
@@ -45,7 +20,7 @@ export const move = (e) => {
             } else {
                 circle.style.left = (400 - 25)
             }
-            addFruit()
+            Util.addFruit()
             break;
         case 38:
             if (parseInt(circle.style.top) - 25 > 0) {
@@ -53,7 +28,7 @@ export const move = (e) => {
             } else {
                 circle.style.top = 0
             }
-            addFruit()
+            Util.addFruit()
 
             break;
         case 40:
@@ -62,7 +37,7 @@ export const move = (e) => {
             } else {
                 circle.style.top = (400 - 25)
             }
-            addFruit()
+            Util.addFruit()
             break;
         default:
             break;

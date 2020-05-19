@@ -1,5 +1,5 @@
 import { move } from './move';
-
+import * as Util from './util'
 
 
 
@@ -45,15 +45,9 @@ document.addEventListener('DOMContentLoaded', ()=> {
     banana.style.top = 0;
 
 
-    const removeFruit = () => {
-        let fruits = document.querySelectorAll('.fruit-list')
-        fruits.forEach(fruit => {
-            fruit.remove()
-        })
 
-    }
 
-    document.addEventListener('click', removeFruit)
+    document.addEventListener('click', Util.removeFruit)
     document.addEventListener('keydown', move)
 
 })
