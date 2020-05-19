@@ -1,9 +1,13 @@
 export const removeFruit = () => {
-    let fruits = document.querySelectorAll('.fruit-list')
-    fruits.forEach(fruit => {
-        fruit.remove()
-    })
 
+    let fruit = document.querySelector('.fruit-list:last-child');
+    fruit.remove();
+
+}
+
+export const randPos = () => {
+    let rand = Math.floor(Math.random() * 15);
+    return rand * 25
 }
 
 
