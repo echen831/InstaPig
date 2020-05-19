@@ -39,3 +39,15 @@ export const addFruit = () => {
         addList('🍌');
     }
 }
+
+export const addFruits = (fruits) => {
+    for (let key in fruits) {
+        let board = document.getElementById('board');
+        let fruit = document.createElement('div');
+        fruit.setAttribute('id', key);
+        fruit.setAttribute('class', 'fruit');
+        let pic = document.createTextNode(fruits[key]);
+        fruit.appendChild(pic)
+        board.appendChild(fruit)
+    }
+}
