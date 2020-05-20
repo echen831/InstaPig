@@ -12,13 +12,12 @@ export default class Board {
         this.circle.style.top = parseInt(this.board.style.height) / 2;
 
 
-        let fruits = document.querySelectorAll('.fruit');
+        this.fruits = document.querySelectorAll('.fruit');
 
-        fruits.forEach(fruit => {
-            this.fruit = fruit
-            this.fruit.style.position = 'absolute';
-            this.fruit.style.left = Util.randPos();
-            this.fruit.style.top = Util.randPos();
+        this.fruits.forEach(fruit => {
+            fruit.style.position = 'absolute';
+            fruit.style.left = Util.randPos();
+            fruit.style.top = Util.randPos();
         })
 
     }

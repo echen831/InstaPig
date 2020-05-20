@@ -16,27 +16,17 @@ const FRUITS = {
 
 document.addEventListener('DOMContentLoaded', ()=> {
 
-    Util.addFruits(FRUITS)
+    Util.addFruits(FRUITS); // Use addFruits method from Util file to add fruits to page.
 
-    let fruits = Object.values(FRUITS)
-    Util.randomFruit(fruits)
-    window.randomFruit = Util.randomFruit
+    let fruits = Object.values(FRUITS); // Generate an array of 4 random fruits using random fruits from Util file.
+    Util.randomFruit(fruits);
 
-    const board = new Board()
+    const board = new Board() // creating a new instance of board.
 
-    window.circle = circle
-    window.grape = grape
-
-    document.addEventListener('move', () => {
-
-        if ((circle.style.left === grape.style.left) && (circle.style.top === grape.style.top)) {
-            Util.addList('🍇');
-        }
-    })
 
     let deleteBtn = document.getElementById('delete-btn')
     deleteBtn.addEventListener('click', Util.removeFruit)
 
-    document.addEventListener('keydown', board.move)
+    document.addEventListener('keydown', board.move) // adding movements to arrow keys
 
 })
