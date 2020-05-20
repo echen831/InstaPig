@@ -51,3 +51,13 @@ export const addFruits = (fruits) => {
         board.appendChild(fruit)
     }
 }
+
+export const randomFruit = (fruits) => {
+    let res = [];
+
+    while (res.length < 4) {
+        let rand = Math.floor(Math.random() * fruits.length)
+        res.push(fruits[rand])
+    }
+    return res
+}

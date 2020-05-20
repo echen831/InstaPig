@@ -11,25 +11,15 @@ export default class Board {
         this.circle.style.left = parseInt(this.board.style.width) / 2;
         this.circle.style.top = parseInt(this.board.style.height) / 2;
 
-        this.apple = document.getElementById('apple');
-        this.apple.style.position = 'absolute';
-        this.apple.style.left = Util.randPos();
-        this.apple.style.top = Util.randPos();
 
-        this.mango = document.getElementById('mango');
-        this.mango.style.position = 'absolute';
-        this.mango.style.left = Util.randPos();
-        this.mango.style.top = Util.randPos();
+        let fruits = document.querySelectorAll('.fruit');
 
-        this.orange = document.getElementById('orange');
-        this.orange.style.position = 'absolute';
-        this.orange.style.left = Util.randPos();
-        this.orange.style.top = Util.randPos();
-
-        this.banana = document.getElementById('banana');
-        this.banana.style.position = 'absolute';
-        this.banana.style.left = Util.randPos();
-        this.banana.style.top = Util.randPos();
+        fruits.forEach(fruit => {
+            this.fruit = fruit
+            this.fruit.style.position = 'absolute';
+            this.fruit.style.left = Util.randPos();
+            this.fruit.style.top = Util.randPos();
+        })
 
     }
 
