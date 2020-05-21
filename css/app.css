@@ -33,7 +33,9 @@ body {
     justify-content: center;
     width: 25px;
     height: 25px;
-    background-color: lightblue;
+    background-image: url(https://www.clipartkey.com/mpngs/m/188-1881028_cartoon-fat-pigs-clipart-png-download-cartoon-pig.png);
+    background-size: contain;
+    border-radius: 15px;
 }
 
 .basket-outer, .target {
@@ -103,3 +105,4 @@ button:hover {
     top: 100px;
     height: 75px;
 }
+

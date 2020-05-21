@@ -22,7 +22,6 @@ class Game {
 
     start () {
         this.addMoveListener();
-        this.addDeleteListener();
         this.resetFruits()
     }
 
@@ -40,20 +39,27 @@ class Game {
         }
     }
 
+    hideTarget () {
+        let basket = document.getElementById('target-basket');
+        basket.setAttribute('class', 'target-basket-hide');
+    };
+
+    showTarget () {
+        let basket = document.getElementById('target-basket');
+        basket.setAttribute('class', 'target-basket')
+    };
+
+
+
     addMoveListener () {
         document.addEventListener('keydown', this.move);
-    }
-
-    addDeleteListener () {
-        document.getElementById('rm-all-btn').addEventListener('click', Util.removeAllFruit);
-        document.getElementById('rm-one-btn').addEventListener('click', Util.removeLastFruit);
-    }
+    };
 
     resetFruits() {
         let randomFruits = Util.randomFruit(Object.values(FRUITS), this.lvl)
         this.deleteRandomFruits();
         this.generateRandomFruits(randomFruits)
-    }
+    };
 
     generateRandomFruits (arr) {
         arr.forEach(ele => {
@@ -64,14 +70,14 @@ class Game {
             item.appendChild(pic);
             basket.appendChild(item);
         })
-    }
+    };
 
     deleteRandomFruits () {
         let fruits = document.querySelectorAll('.target-fruit');
         fruits.forEach(fruit => {
             fruit.remove()
         })
-    }
+    };
 
     move(e) {
         let moveBy = 25
@@ -117,4 +123,4 @@ class Game {
 
 };
 
-export default Game
+export default Game;
