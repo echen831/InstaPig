@@ -5,42 +5,52 @@ import Board from './board'
 
 console.log('webpack is working');
 
-const FRUITS = {
-    'apple': '🍎',
-    'mango': '🥭',
-    'orange': '🍊',
-    'banana': '🍌',
-    'grape': '🍇',
-    'strawberry': '🍓'
-};
+const FRUITS = Util.FRUITS
 
 document.addEventListener('DOMContentLoaded', ()=> {
 
     Util.addFruits(FRUITS); // Use addFruits method from Util file to add fruits to page.
 
-    let fruits = Object.values(FRUITS); // Generate an array of 4 random fruits using random fruits from Util file.
+    let fruits = Object.values(FRUITS); // Generate an array of random fruits using random fruits from Util file.
     let randomFruits = Util.randomFruit(fruits);
-
-    const targetFruits = (arr) => {
-        arr.forEach(ele => {
-            let basket = document.getElementById('target-basket');
-            let item = document.createElement('div');
-            item.setAttribute('class', 'target-fruit');
-            let pic = document.createTextNode(ele);
-            item.appendChild(pic);
-            basket.appendChild(item);
-        })
-    }
-
-    targetFruits(randomFruits)
+    Util.targetFruits(randomFruits) //produce them onto the target basket
 
 
     const board = new Board() // creating a new instance of board.
 
+    const win = (target, current) => {
+        let win = false
 
-    let deleteBtn = document.getElementById('delete-btn')
-    deleteBtn.addEventListener('click', Util.removeFruit)
+        if (target.join(" ") === current.replace(/\n/g, " ")) {
+            win = true
+        }
 
-    document.addEventListener('keydown', board.move) // adding movements to arrow keys
+        if (win) {
+            alert('you win')
+        } else {
+            alert('keep trying')
+        }
+    }
+
+
+
+
+    document.addEventListener('keydown', (e)=>{
+        if (e.keyCode === 32) {
+            let currFruits = document.getElementById('basket').innerText;
+            console.log(currFruits);
+            console.log(randomFruits.join(''));
+            win(randomFruits, currFruits)
+        }
+    })
+
+
+    let deleteBtn = document.getElementById('rm-all-btn');
+    deleteBtn.addEventListener('click', Util.removeAllFruit);
+
+    document.getElementById('rm-one-btn').addEventListener('click', Util.removeLastFruit);
+
+
+    document.addEventListener('keydown', board.move); // adding movements to arrow keys
 
 })

@@ -77,10 +77,23 @@ body {
     height: 25px;
 }
 
-#delete-btn {
+.delete-btn {
+    display: flex;
     position: absolute;
-    top: 132px;
+    top: 118px;
 
+}
+
+button {
+    cursor: pointer;
+    outline-style:none;
+    box-shadow:none;
+    border-color:transparent;
+    border-radius: 15px;
+}
+
+button:hover {
+    background-color: coral;
 }
 
 
