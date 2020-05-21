@@ -77,4 +77,15 @@ export const randomFruit = (fruits, lvl=3) => {
     return res
 };
 
+export const placeFruits = () => {
+
+    let fruits = document.querySelectorAll('.fruit');
+
+    fruits.forEach(fruit => {
+        fruit.style.position = 'absolute';
+        fruit.style.left = randPos();
+        fruit.style.top = randPos();
+    })
+}
+
 

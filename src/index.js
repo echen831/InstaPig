@@ -16,7 +16,11 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
 
 
+    let basket = document.getElementById('basket');
+    window.basket = basket
+    window.random = game.randomFruits
 
+    window.win = game.win
 
 
     document.addEventListener('keydown', (e)=>{

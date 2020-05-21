@@ -15,7 +15,8 @@ class Game {
 
     constructor() {
         this.board = new Board();
-        this.lvl = 3;
+        this.lvl = 1;
+        this.streak = 0;
         this.randomFruits = Util.randomFruit(Object.values(FRUITS), this.lvl)
 
     }
@@ -30,13 +31,19 @@ class Game {
 
         if (target.join(" ") === current.replace(/\n/g, " ")) {
             win = true
-        }
+        };
 
         if (win) {
-            alert('you win')
+            this.increaseLevel()
         } else {
             alert('keep trying')
-        }
+        };
+    };
+
+    increaseLevel() {
+        this.streak ++
+        this.lvl ++
+        this.resetFruits()
     }
 
     hideTarget () {
@@ -56,9 +63,11 @@ class Game {
     };
 
     resetFruits() {
-        let randomFruits = Util.randomFruit(Object.values(FRUITS), this.lvl)
+        this.randomFruits = Util.randomFruit(Object.values(FRUITS), this.lvl);
         this.deleteRandomFruits();
-        this.generateRandomFruits(randomFruits)
+        Util.removeAllFruit();
+        Util.placeFruits();
+        this.generateRandomFruits(this.randomFruits);
     };
 
     generateRandomFruits (arr) {
