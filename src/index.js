@@ -1,12 +1,11 @@
 import * as Util from './util';
-import Board from './board';
 import Game from './game';
+import { FRUITS } from './game';
 
 
 
 console.log('webpack is working');
 
-const FRUITS = Util.FRUITS
 
 document.addEventListener('DOMContentLoaded', ()=> {
 
@@ -31,8 +30,8 @@ document.addEventListener('DOMContentLoaded', ()=> {
     })
 
 
-
-
-    
+    document.addEventListener('click', () => {
+        game.resetFruits()
+    })
 
 })

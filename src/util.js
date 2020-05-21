@@ -1,11 +1,3 @@
-export const FRUITS = {
-    'apple': '🍎',
-    'mango': '🥭',
-    'orange': '🍊',
-    'banana': '🍌',
-    'grape': '🍇',
-    'strawberry': '🍓'
-}
 
 export const removeLastFruit = () => {
 
@@ -85,13 +77,4 @@ export const randomFruit = (fruits, lvl=3) => {
     return res
 };
 
-export const targetFruits = (arr) => {
-    arr.forEach(ele => {
-        let basket = document.getElementById('target-basket');
-        let item = document.createElement('div');
-        item.setAttribute('class', 'target-fruit');
-        let pic = document.createTextNode(ele);
-        item.appendChild(pic);
-        basket.appendChild(item);
-    })
-};
+

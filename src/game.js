@@ -2,7 +2,7 @@ import * as Util from './util';
 import Board from './board';
 
 
-const FRUITS = {
+export const FRUITS = {
     'apple': '🍎',
     'mango': '🥭',
     'orange': '🍊',
@@ -23,7 +23,7 @@ class Game {
     start () {
         this.addMoveListener();
         this.addDeleteListener();
-        this.generateRandomFruits()
+        this.resetFruits()
     }
 
     win (target, current) {
@@ -49,8 +49,28 @@ class Game {
         document.getElementById('rm-one-btn').addEventListener('click', Util.removeLastFruit);
     }
 
-    generateRandomFruits () {
-        Util.targetFruits(this.randomFruits)
+    resetFruits() {
+        let randomFruits = Util.randomFruit(Object.values(FRUITS), this.lvl)
+        this.deleteRandomFruits();
+        this.generateRandomFruits(randomFruits)
+    }
+
+    generateRandomFruits (arr) {
+        arr.forEach(ele => {
+            let basket = document.getElementById('target-basket');
+            let item = document.createElement('div');
+            item.setAttribute('class', 'target-fruit');
+            let pic = document.createTextNode(ele);
+            item.appendChild(pic);
+            basket.appendChild(item);
+        })
+    }
+
+    deleteRandomFruits () {
+        let fruits = document.querySelectorAll('.target-fruit');
+        fruits.forEach(fruit => {
+            fruit.remove()
+        })
     }
 
     move(e) {
