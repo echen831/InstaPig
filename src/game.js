@@ -1,25 +1,56 @@
-import * as Util from './util'
-
-export default class Board {
-    constructor(width = 400, height = 400) {
-        this.board = document.querySelector('.board');
-        this.board.style.width = width;
-        this.board.style.height = height;
-
-        this.circle = document.querySelector('.circle');
-        this.circle.style.position = 'absolute';
-        this.circle.style.left = parseInt(this.board.style.width) / 2;
-        this.circle.style.top = parseInt(this.board.style.height) / 2;
+import * as Util from './util';
+import Board from './board';
 
 
-        this.fruits = document.querySelectorAll('.fruit');
+const FRUITS = {
+    'apple': '🍎',
+    'mango': '🥭',
+    'orange': '🍊',
+    'banana': '🍌',
+    'grape': '🍇',
+    'strawberry': '🍓'
+}
 
-        this.fruits.forEach(fruit => {
-            fruit.style.position = 'absolute';
-            fruit.style.left = Util.randPos();
-            fruit.style.top = Util.randPos();
-        })
+class Game {
 
+    constructor() {
+        this.board = new Board();
+        this.lvl = 3;
+        this.randomFruits = Util.randomFruit(Object.values(FRUITS), this.lvl)
+
+    }
+
+    start () {
+        this.addMoveListener();
+        this.addDeleteListener();
+        this.generateRandomFruits()
+    }
+
+    win (target, current) {
+        let win = false
+
+        if (target.join(" ") === current.replace(/\n/g, " ")) {
+            win = true
+        }
+
+        if (win) {
+            alert('you win')
+        } else {
+            alert('keep trying')
+        }
+    }
+
+    addMoveListener () {
+        document.addEventListener('keydown', this.move);
+    }
+
+    addDeleteListener () {
+        document.getElementById('rm-all-btn').addEventListener('click', Util.removeAllFruit);
+        document.getElementById('rm-one-btn').addEventListener('click', Util.removeLastFruit);
+    }
+
+    generateRandomFruits () {
+        Util.targetFruits(this.randomFruits)
     }
 
     move(e) {
@@ -64,6 +95,6 @@ export default class Board {
 
     }
 
+};
 
-}
-
+export default Game
