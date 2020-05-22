@@ -3,7 +3,6 @@ import Game from './game';
 import { FRUITS } from './game';
 
 
-
 console.log('webpack is working');
 
 
@@ -37,7 +36,6 @@ document.addEventListener('DOMContentLoaded', ()=> {
             Util.removeLastFruit()
         }
     })
-
 
 
 })

@@ -46,17 +46,11 @@ class Game {
         this.resetFruits()
     }
 
-    hideTarget () {
-        let basket = document.getElementById('target-basket');
-        basket.setAttribute('class', 'target-basket-hide');
-    };
-
-    showTarget () {
-        let basket = document.getElementById('target-basket');
-        basket.setAttribute('class', 'target-basket')
-    };
-
-
+    // renderStreak() {
+    //     let ele = document.getElementById('streak');
+    //     let streak = document.createTextNode(this.streak)
+    //     ele.removeChild(streak, ele.children)
+    // }
 
     addMoveListener () {
         document.addEventListener('keydown', this.move);

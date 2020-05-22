@@ -11,7 +11,8 @@ body {
 .title {
     position: absolute;
     font-size: 50px;
-    color: rgb(94, 255, 0);
+    color: rgb(167, 51, 115);
+    text-shadow: 2px 2px #000000;
     left: 400px;
 }
 .outer-board {
@@ -38,7 +39,7 @@ body {
     border-radius: 15px;
 }
 
-.basket-outer, .target {
+.basket-outer, .target, .streak-outer {
     background-color: lightgreen;
     color: darkkhaki;
     display: flex;
@@ -79,30 +80,19 @@ body {
     height: 25px;
 }
 
-.delete-btn {
-    display: flex;
-    position: absolute;
-    top: 118px;
-
-}
-
-button {
-    cursor: pointer;
-    outline-style:none;
-    box-shadow:none;
-    border-color:transparent;
-    border-radius: 15px;
-}
-
-button:hover {
-    background-color: coral;
-}
 
 
 .target {
     background-color: rgb(208, 255, 196);
     color: rgb(68, 218, 38);
     top: 100px;
+    height: 75px;
+}
+
+.streak-outer {
+    color: crimson;
+    background-color: rgb(255, 183, 197);
+    top: 425px;
     height: 75px;
 }
 
