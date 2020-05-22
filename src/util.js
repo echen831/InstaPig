@@ -2,7 +2,10 @@
 export const removeLastFruit = () => {
 
     let fruit = document.querySelector('.fruit-list:last-child');
-    fruit.remove();
+
+    if (fruit) {
+        fruit.remove();
+    }
 
 }
 

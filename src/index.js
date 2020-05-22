@@ -14,14 +14,6 @@ document.addEventListener('DOMContentLoaded', ()=> {
     game.start()
 
 
-
-    let basket = document.getElementById('basket');
-    window.basket = basket
-    window.random = game.randomFruits
-
-    window.win = game.win
-
-
     document.addEventListener('keydown', (e)=>{
         if (e.keyCode === 32) {
             let currFruits = document.getElementById('basket').innerText;

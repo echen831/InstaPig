@@ -1,14 +1,13 @@
 
-// class Timer {
+class Timer {
+    constructor (start) {
+        this.time = start
+    }
 
+};
 
-//     render () {
-//         return (
-//             <div>
-//                 I am the Timer
-//             </div>
-//         )
-//     }
-// };
+    _tick () {
+        
+    }
 
-// export default Timer
+export default Timer

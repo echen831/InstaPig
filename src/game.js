@@ -17,7 +17,7 @@ class Game {
         this.board = new Board();
         this.lvl = 1;
         this.streak = 0;
-        this.randomFruits = Util.randomFruit(Object.values(FRUITS), this.lvl)
+        this.randomFruits = ''
 
     }
 
@@ -35,7 +35,10 @@ class Game {
 
         if (win) {
             this.increaseLevel()
-        } else {
+        } 
+        else {
+            this.streak = 0
+            this.renderStreak()
             alert('keep trying')
         };
     };
@@ -43,14 +46,14 @@ class Game {
     increaseLevel() {
         this.streak ++
         this.lvl ++
-        this.resetFruits()
+        this.resetFruits();
+        this.renderStreak();
     }
 
-    // renderStreak() {
-    //     let ele = document.getElementById('streak');
-    //     let streak = document.createTextNode(this.streak)
-    //     ele.removeChild(streak, ele.children)
-    // }
+    renderStreak() {
+        let ele = document.getElementById('streak');
+        ele.innerText = this.streak;
+    }
 
     addMoveListener () {
         document.addEventListener('keydown', this.move);
@@ -108,7 +111,6 @@ class Game {
                     circle.style.top = 0
                 }
                 Util.addFruit()
-
                 break;
             case 40:
                 if (parseInt(circle.style.top) + 25 < 400) {
