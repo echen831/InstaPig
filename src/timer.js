@@ -1,13 +1,16 @@
 
-class Timer {
-    constructor (start) {
-        this.time = start
-    }
+// class Timer {
+//     constructor () {
+//         this.time = 60
+//     }
 
-};
+// };
 
-    _tick () {
-        
-    }
 
-export default Timer
+//     tick () {
+//         if (this.time) {
+//             this.time -= 1
+//         }
+//     }
+
+// export default Timer

@@ -35,11 +35,11 @@ body {
     width: 25px;
     height: 25px;
     background-image: url(https://www.clipartkey.com/mpngs/m/188-1881028_cartoon-fat-pigs-clipart-png-download-cartoon-pig.png);
-    background-size: contain;
+    background-size: 25px;
     border-radius: 15px;
 }
 
-.basket-outer, .target, .streak-outer {
+.basket-outer, .target, .streak-outer, .timer-outer {
     background-color: lightgreen;
     color: darkkhaki;
     display: flex;
@@ -47,18 +47,13 @@ body {
     flex-direction: column;
     align-items: center;
     width: 150px;
-    height: 150px;
+    height: 100px;
     border: 1px solid black;
-    left: 800px;
+    left: 150px;
     top: 200px;
     border-radius: 15px;
 }
 
-.basket-outer p {
-    position: absolute;
-    left: 10px;
-
-}
 
 .basket, .target-basket{
     display: flex;
@@ -70,8 +65,12 @@ body {
 }
 
 .fruit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 25px;
     height: 25px;
+    font-size: 25px;
 }
 
 .fruit-list {
@@ -86,13 +85,21 @@ body {
     background-color: rgb(208, 255, 196);
     color: rgb(68, 218, 38);
     top: 100px;
-    height: 75px;
 }
 
 .streak-outer {
     color: crimson;
     background-color: rgb(255, 183, 197);
-    top: 425px;
-    height: 75px;
+    top: 400px;
+}
+
+.timer-outer {
+    color: rgb(0, 0, 0);
+    background-color: lightsteelblue;
+    top: 300px;
+}
+
+#timer, #streak {
+    font-size: 40px;
 }
 

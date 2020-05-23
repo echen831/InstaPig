@@ -12,7 +12,20 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
     const game = new Game()
     game.start()
-
+    
+    const setTimer = () => {
+        
+        let timer = document.getElementById('timer');
+        let num = parseInt(timer.innerText)
+        if (num > 0) {
+            timer.innerText = (num - 1)
+        } else {
+            // alert('game over')
+        }
+    }
+    setInterval(setTimer, 1000);
+    
+    
 
     document.addEventListener('keydown', (e)=>{
         if (e.keyCode === 32) {
@@ -28,6 +41,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
             Util.removeLastFruit()
         }
     })
+
 
 
 })
