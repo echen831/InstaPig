@@ -8,10 +8,14 @@ console.log('webpack is working');
 
 document.addEventListener('DOMContentLoaded', ()=> {
 
-    Util.addFruits(FRUITS); // Use addFruits method from Util file to add fruits to page.
+    //Util.addFruits(FRUITS); // Use addFruits method from Util file to add fruits to page.
 
     const game = new Game()
-    game.start()
+
+    document.getElementById('start-btn').addEventListener('click', () => {
+        game.start();
+        setInterval(setTimer, 1000);
+    })
     
     const setTimer = () => {
         
@@ -20,11 +24,9 @@ document.addEventListener('DOMContentLoaded', ()=> {
         if (num > 0) {
             timer.innerText = (num - 1)
         } else {
-            // alert('game over')
+            
         }
     }
-    setInterval(setTimer, 1000);
-    
     
 
     document.addEventListener('keydown', (e)=>{
