@@ -1,5 +1,4 @@
 export const setTimer = () => {
-
     let timer = document.getElementById('timer');
     let num = parseInt(timer.innerText)
     if (num > 0) {
@@ -7,4 +6,9 @@ export const setTimer = () => {
     } else {
         // console.log('you lose')
     }
+}
+
+export const resetTimer = () => {
+    let timer = document.getElementById('timer');
+    timer.innerText = 60
 }

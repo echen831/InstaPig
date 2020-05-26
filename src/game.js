@@ -1,6 +1,6 @@
 import * as Util from './util';
 import Board from './board';
-import {setTimer} from './timer'
+import { setTimer, resetTimer} from './timer'
 
 export const FRUITS = {
     'apple': '🍎',
@@ -19,12 +19,21 @@ class Game {
         this.streak = 0;
         this.randomFruits = ''
 
+        this.timer = setInterval(setTimer, 1000)
     }
 
     start () {
+        this.reset();
+        this.renderStreak();
         this.addMoveListener();
         this.resetFruits();
-        setInterval(setTimer, 1000)
+        resetTimer();
+
+    }
+
+    reset () {
+        this.lvl = 1;
+        this.streak = 0;
     }
 
     win (target, current) {

@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
 
     const game = new Game()
-    game.start();
 
 
     
@@ -26,7 +25,11 @@ document.addEventListener('DOMContentLoaded', ()=> {
         }
 
         if (e.keyCode === 18) {
-            Util.removeLastFruit()
+            Util.removeLastFruit();
+        } 
+        
+        if (e.keyCode === 13) {
+            game.start()
         }
     })
 
