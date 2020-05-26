@@ -1,16 +1,10 @@
+export const setTimer = () => {
 
-// class Timer {
-//     constructor () {
-//         this.time = 60
-//     }
-
-// };
-
-
-//     tick () {
-//         if (this.time) {
-//             this.time -= 1
-//         }
-//     }
-
-// export default Timer
+    let timer = document.getElementById('timer');
+    let num = parseInt(timer.innerText)
+    if (num > 0) {
+        timer.innerText = (num - 1)
+    } else {
+        // console.log('you lose')
+    }
+}

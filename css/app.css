@@ -39,7 +39,7 @@ body {
     border-radius: 15px;
 }
 
-.basket-outer, .target, .streak-outer, .timer-outer {
+.basket-outer, .target, .streak-outer, .timer-outer, .instructions {
     background-color: lightgreen;
     color: darkkhaki;
     display: flex;
@@ -103,3 +103,11 @@ body {
     font-size: 40px;
 }
 
+
+.instructions {
+    top: 100px;
+    left: 800px;
+    width: 200px;
+    height: 300px;
+    color: darkblue;
+}

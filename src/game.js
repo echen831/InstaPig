@@ -1,6 +1,6 @@
 import * as Util from './util';
 import Board from './board';
-
+import {setTimer} from './timer'
 
 export const FRUITS = {
     'apple': '🍎',
@@ -23,7 +23,8 @@ class Game {
 
     start () {
         this.addMoveListener();
-        this.resetFruits()
+        this.resetFruits();
+        setInterval(setTimer, 1000)
     }
 
     win (target, current) {
