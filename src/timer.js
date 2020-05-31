@@ -4,7 +4,8 @@ export const setTimer = () => {
     if (num > 0) {
         timer.innerText = (num - 1)
     } else {
-        // console.log('you lose')
+        alert('you lose');
+        resetTimer();
     }
 }
 
