@@ -6,7 +6,8 @@ body, ul, div, p, li{
 
 body {
     background-image: url(https://previews.123rf.com/images/vectorpouch/vectorpouch1809/vectorpouch180900131/110754541-supermarket-and-grocery-food-products-on-shelves-vector-illustration-no-people-on-cartoon-background.jpg);
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .title {
     position: absolute;

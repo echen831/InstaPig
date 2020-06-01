@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', ()=> {
     game.start();
     let audio = document.getElementById('audio');
     audio.loop = true;
+
+    
     
     
 
