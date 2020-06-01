@@ -9,13 +9,15 @@ console.log('webpack is working');
 document.addEventListener('DOMContentLoaded', ()=> {
 
 
-    const game = new Game()
-
-
+    const game = new Game();
+    game.start();
+    let audio = document.getElementById('audio');
+    audio.loop = true;
+    
     
 
     document.addEventListener('keydown', (e)=>{
-        if (e.keyCode === 32) {
+        if (e.keyCode === 13) {
             let currFruits = document.getElementById('basket').innerText;
             game.win(game.randomFruits, currFruits);
         }
@@ -28,8 +30,9 @@ document.addEventListener('DOMContentLoaded', ()=> {
             Util.removeLastFruit();
         } 
         
-        if (e.keyCode === 13) {
-            game.start()
+        if (e.keyCode === 32) {
+            game.start();
+            audio.play();
         }
     })
 
