@@ -113,4 +113,14 @@ body {
     color: darkblue;
 }
 
+.audio-controls {
+    display: flex;
+    width: 100%;
+    padding: 1em;
+}
+
+.audio-controls button {
+    width: 25%;
+}
+
 
