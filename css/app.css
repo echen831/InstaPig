@@ -121,6 +121,7 @@ body {
 
 .audio-controls button {
     width: 25%;
+    cursor: pointer;
 }
 
 

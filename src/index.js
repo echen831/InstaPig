@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
 
     const game = new Game();
-    game.start();
+    // game.start();
     let audio = document.getElementById('audio');
 
     
