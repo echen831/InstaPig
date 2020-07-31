@@ -19,7 +19,7 @@ class Game {
         this.streak = 0;
         this.randomFruits = ''
 
-        this.timer = setInterval(setTimer, 1000)
+        // this.timer = setInterval(setTimer, 1000)
     }
 
     start () {
@@ -27,7 +27,8 @@ class Game {
         this.renderStreak();
         this.addMoveListener();
         this.resetFruits();
-        resetTimer();
+        this.timer = setInterval(setTimer, 1000)
+        // resetTimer();
     }
 
     reset () {
