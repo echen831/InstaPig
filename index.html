@@ -10,8 +10,13 @@
     <script src="./dist/main.js"></script>
 </head>
 <body>
-    <audio src="./test.mp3" type="audio/mp3" id='audio' autoplay loop></audio>
-    <h1 class='title'>InstaPig</h1>
+    <audio id='player' src="./test.mp3" type="audio/mp3" id='audio' autoplay loop></audio>
+    <div>
+        <button onclick="document.getElementById('player').play()">Play</button>
+        <button onclick="document.getElementById('player').pause()">Pause</button>
+        <button onclick="document.getElementById('player').volume += 0.1">Vol +</button>
+        <button onclick="document.getElementById('player').volume -= 0.1">Vol -</button>
+    </div>
     <div class='outer-board'>
         <div id='board' class='board'>
             <div id='circle' class='circle'>
