@@ -113,15 +113,31 @@ body {
     color: darkblue;
 }
 
-.audio-controls {
+.sound-container {
     display: flex;
-    width: 100%;
-    padding: 1em;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.audio-controls button {
-    width: 25%;
+.sound-container p {
+    display: flex;
+    justify-content: center;
+}
+
+.audio-controls {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.audio-controls p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2em;
+    height: 2em;
     cursor: pointer;
+    border-radius: 50%;
 }
 
 
