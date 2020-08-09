@@ -33,7 +33,10 @@ document.addEventListener('DOMContentLoaded', ()=> {
         
         if (e.keyCode === 32) {
             game.start();
-            audio.play();
+        }
+
+        if (e.keyCode === 86) {
+            game.pause();
         }
     })
 
