@@ -26,13 +26,14 @@ class Game {
         this.renderStreak();
         this.addMoveListener();
         this.resetFruits();
-        this.timer = setInterval(setTimer, 1000)
+        
     };
 
     reset () {
         this.lvl = 1;
         this.streak = 0;
-        resetTimer();
+        
+        // resetTimer();
     }
 
     pause() {
