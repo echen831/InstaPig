@@ -38,6 +38,11 @@ document.addEventListener('DOMContentLoaded', ()=> {
         if (e.keyCode === 86) {
             game.pause();
         }
+
+        if(e.keyCode === 66) {
+            game.unPause();
+        }
+
     })
 
 

@@ -37,7 +37,11 @@ class Game {
     }
 
     pause() {
-        clearInterval(this.timer)
+        clearInterval(this.timer);
+    }
+
+    unPause() {
+        this.timer = setInterval(setTimer, 1000);
     }
 
     win (target, current) {
