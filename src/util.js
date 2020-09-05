@@ -122,16 +122,19 @@ export const randomFruit = (fruits, lvl=3) => {
 };
 
 export const replaceFruit = (str) => {
+    let current = findAllPos()
     let fruit = document.getElementById(str);
-    fruit.style.top = randPos();
-    fruit.style.left = randPos();
+
+    let pos = createPos(current)
+    fruit.style.top = pos[0];
+    fruit.style.left = pos[1];
 }
 
 export const placeFruits = () => {
-
+    let circle = document.getElementById('circle')
     let fruits = document.querySelectorAll('.fruit');
 
-    let currentPos = [];
+    let currentPos = [[circle.style.left, circle.style.top]];
 
     fruits.forEach(fruit => {
         fruit.style.position = 'absolute';
@@ -144,6 +147,21 @@ export const placeFruits = () => {
         currentPos.push(pos)
     })
 };
+
+export const findAllPos = () => {
+    let circle = document.getElementById('circle')
+    let fruits = document.querySelectorAll('.fruit')
+    let res = [[circle.style.left, circle.style.top]]
+
+    fruits.forEach(fruit => {
+        let left = fruit.style.left;
+        let top = fruit.style.top;
+
+        res.push([left, top])
+    })
+
+    return res
+}
 
 
 

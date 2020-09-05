@@ -27,6 +27,7 @@ class Game {
         this.addMoveListener();
         this.resetFruits();
         this.timer = setInterval(setTimer, 1000)
+        Util.findAllPos()
     };
 
     reset () {
