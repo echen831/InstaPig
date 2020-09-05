@@ -142,7 +142,9 @@ export const placeFruits = () => {
     let circle = document.getElementById('circle')
     let fruits = document.querySelectorAll('.fruit');
 
-    let currentPos = findAllPos();
+    let currentPos = [[
+        Number(circle.style.left.slice(0, circle.style.left.length - 2)),
+        Number(circle.style.top.slice(0, circle.style.top.length - 2))]];
 
     fruits.forEach(fruit => {
         fruit.style.position = 'absolute';
@@ -159,7 +161,9 @@ export const placeFruits = () => {
 export const findAllPos = () => {
     let circle = document.getElementById('circle')
     let fruits = document.querySelectorAll('.fruit')
-    let res = [[circle.style.left, circle.style.top]]
+    let res = [[
+        Number(circle.style.left.slice(0, circle.style.left.length - 2)), 
+        Number(circle.style.top.slice(0, circle.style.top.length-2))]]
 
     fruits.forEach(fruit => {
         let left = fruit.style.left;
@@ -167,7 +171,6 @@ export const findAllPos = () => {
 
         res.push([left, top])
     })
-
     return res
 }
 
