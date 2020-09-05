@@ -24,7 +24,7 @@ export const randPos = () => {
 export const createPos = (current) => {
 
     let unique = false;
-    let res
+    let res;
 
     while (!unique) {
         let left = randPos()
@@ -32,9 +32,9 @@ export const createPos = (current) => {
 
         if(checkUnique(current, [left, top])) {
             unique = true
+            res = [left, top]
         }
 
-        res = [left, top]
     }
 
     return res
@@ -97,6 +97,14 @@ export const addFruit = () => {
         addList('🍓');
         replaceFruit('strawberry');
     }
+    if ((circle.style.left === watermelon.style.left) && (circle.style.top === watermelon.style.top)) {
+        addList('🍉');
+        replaceFruit('watermelon');
+    }
+    if ((circle.style.left === cherry.style.left) && (circle.style.top === cherry.style.top)) {
+        addList('🍒');
+        replaceFruit('cherry');
+    }
 }
 
 export const addFruits = (fruits) => {
@@ -134,7 +142,7 @@ export const placeFruits = () => {
     let circle = document.getElementById('circle')
     let fruits = document.querySelectorAll('.fruit');
 
-    let currentPos = [[circle.style.left, circle.style.top]];
+    let currentPos = findAllPos();
 
     fruits.forEach(fruit => {
         fruit.style.position = 'absolute';

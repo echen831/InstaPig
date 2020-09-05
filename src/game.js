@@ -8,7 +8,9 @@ export const FRUITS = {
     'orange': '🍊',
     'banana': '🍌',
     'grape': '🍇',
-    'strawberry': '🍓'
+    'strawberry': '🍓',
+    'watermelon': '🍉',
+    'cherry':'🍒'
 }
 
 class Game {
