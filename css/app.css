@@ -38,6 +38,7 @@ body {
     background-image: url(https://www.clipartkey.com/mpngs/m/188-1881028_cartoon-fat-pigs-clipart-png-download-cartoon-pig.png);
     background-size: 25px;
     border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0);
 }
 
 .basket-outer, .target, .streak-outer, .timer-outer, .instructions {

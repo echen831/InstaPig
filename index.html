@@ -5,6 +5,9 @@
     <title>InstaPig</title>
     <link href='https://fonts.googleapis.com/css?family=Slackey' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Permanent Marker' rel='stylesheet'>
+    <link href="./fontawesome/css/fontawesome.css" rel="stylesheet">
+    <!-- <link href="./fontawesome/css/brands.css" rel="stylesheet"> -->
+    <link href="./fontawesome/css/solid.css" rel="stylesheet">
     <link rel='stylesheet' type='text/css' href="./css/app.css">
     <link rel="icon" href="./favicon.ico">
     <script src="./dist/main.js"></script>
@@ -58,10 +61,10 @@
         <div class='sound-container'>
             <p>Sound</p>
             <div class='audio-controls'>
-                <p onclick="document.getElementById('player').play()">▶️</p>
-                <p onclick="document.getElementById('player').pause()">⏸</p>
-                <p onclick="document.getElementById('player').volume += 0.1">➕</p>
-                <p onclick="document.getElementById('player').volume -= 0.1">➖</p>
+                <p onclick="document.getElementById('player').play()"><i class="fas fa-play"></i></p>
+                <p onclick="document.getElementById('player').pause()"><i class="fas fa-pause"></i></p>
+                <p onclick="document.getElementById('player').volume += 0.1"><i class="fas fa-volume-up"></i></p>
+                <p onclick="document.getElementById('player').volume -= 0.1"><i class="fas fa-volume-down"></i></p>
             </div>
         </div>
     </div>
