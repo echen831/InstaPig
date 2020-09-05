@@ -166,8 +166,8 @@ export const findAllPos = () => {
         Number(circle.style.top.slice(0, circle.style.top.length-2))]]
 
     fruits.forEach(fruit => {
-        let left = fruit.style.left;
-        let top = fruit.style.top;
+        let left = Number(fruit.style.left.slice(0, fruit.style.left.length-2));
+        let top = Number(fruit.style.top.slice(0,fruit.style.top.length-2));
 
         res.push([left, top])
     })
