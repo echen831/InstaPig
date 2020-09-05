@@ -21,6 +21,41 @@ export const randPos = () => {
     return rand * 25
 }
 
+export const createPos = (current) => {
+
+    let unique = false;
+    let res
+
+    while (!unique) {
+        let left = randPos()
+        let top = randPos()
+
+        if(checkUnique(current, [left, top])) {
+            unique = true
+        }
+
+        res = [left, top]
+    }
+
+    return res
+
+};
+
+export const checkUnique = (current, pos) => {
+
+    if (!current.length) return true
+
+    for(let i = 0; i < current.length; i ++) {
+        let ele = current[i]
+
+        if(pos[0] === ele[0] && pos[1] === ele[1]) {
+            return false
+        }
+    }
+
+    return true
+}
+
 
 export const addList = (str) => {
     let basket = document.getElementById('basket')
@@ -96,11 +131,20 @@ export const placeFruits = () => {
 
     let fruits = document.querySelectorAll('.fruit');
 
+    let currentPos = [];
+
     fruits.forEach(fruit => {
         fruit.style.position = 'absolute';
-        fruit.style.left = randPos();
-        fruit.style.top = randPos();
+        let pos = createPos(currentPos);
+        let left = pos[0];
+        let top = pos[1]
+        fruit.style.left = left;
+        fruit.style.top = top;
+
+        currentPos.push(pos)
     })
-}
+};
+
+
 
 
