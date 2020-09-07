@@ -6,8 +6,18 @@ import { FRUITS } from './game';
 console.log('webpack is working');
 
 
+
+
 document.addEventListener('DOMContentLoaded', ()=> {
 
+    let modal = document.getElementById('modal');
+    let closeBtn = document.getElementById('closeBtn');
+
+    const closeModal = () => {
+        modal.style.display = 'none';
+    }
+
+    closeBtn.addEventListener('click', closeModal);
 
     const game = new Game();
     // game.start();
