@@ -117,8 +117,8 @@ class Game {
         } else {
             let goModal = document.getElementById('go-modal')
             goModal.style.display = 'block'
-            let closeBtn = document.getElementById('closeBtn')
-            closeBtn.addEventListener('click', () => { goModal.style.display = 'none'})
+            let goCloseBtn = document.getElementById('go-closeBtn')
+            goCloseBtn.addEventListener('click', () => {goModal.style.display = 'none'})
             this.resetTimer();
         }
     }
