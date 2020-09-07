@@ -115,12 +115,19 @@ class Game {
         if (num > 0) {
             timer.innerText = (num - 1)
         } else {
-            let goModal = document.getElementById('go-modal')
-            goModal.style.display = 'block'
-            let goCloseBtn = document.getElementById('go-closeBtn')
-            goCloseBtn.addEventListener('click', () => {goModal.style.display = 'none'})
+            this.endGame();
             this.resetTimer();
         }
+    }
+
+    endGame () {
+        let goModal = document.getElementById('go-modal')
+        goModal.style.display = 'block'
+        let goCloseBtn = document.getElementById('go-closeBtn')
+        goCloseBtn.addEventListener('click', () => { goModal.style.display = 'none' })
+        let score = document.getElementById('streak')
+        let finalScore = document.getElementById('final-score')
+        finalScore.innerText = score.innerText 
     }
     
     resetTimer () {

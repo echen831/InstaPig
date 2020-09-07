@@ -218,6 +218,14 @@ body {
     box-shadow: 0 0 10px;
 }
 
+.final-score {
+    display: flex;
+}
+
+.final-score p {
+    padding: 0.5em;
+}
+
 /* Modal End */
 
 
