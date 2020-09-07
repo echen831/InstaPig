@@ -11,10 +11,12 @@ console.log('webpack is working');
 document.addEventListener('DOMContentLoaded', ()=> {
 
     let modal = document.getElementById('modal');
+    let goModal = document.getElementById('go-modal');
     let closeBtn = document.getElementById('closeBtn');
 
     const closeModal = () => {
         modal.style.display = 'none';
+        goModal.style.display = 'none';
     }
 
     closeBtn.addEventListener('click', closeModal);

@@ -4,12 +4,14 @@ export const setTimer = () => {
     if (num > 0) {
         timer.innerText = (num - 1)
     } else {
-        alert('Game Over');
-        resetTimer();
+        let modal = document.getElementById('modal')
+        modal.style.display = 'block'
+        // resetTimer();
     }
 }
 
 export const resetTimer = () => {
+    // clearInterval(this.timer)
     let timer = document.getElementById('timer');
     timer.innerText = 60
 }

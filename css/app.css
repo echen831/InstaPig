@@ -157,6 +157,8 @@ body {
 }
 
 .modal-content {
+    position: relative;
+    display: flex;
     background-color: white;
     margin: 20% auto;
     padding: 20px;
@@ -166,9 +168,13 @@ body {
 
 
 .closeBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
     color: teal;
-    float: right;
-    font-size: 30px;
+    font-size: xx-large;
+    padding-right: .5em;
+    
 }
 
 .closeBtn:hover, .closeBtn:focus {
@@ -177,6 +183,9 @@ body {
     cursor: pointer;
 }
 
+#go-modal {
+    display: none;
+}
 
 
 /* Modal End */

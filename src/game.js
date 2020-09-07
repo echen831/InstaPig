@@ -1,6 +1,5 @@
 import * as Util from './util';
 import Board from './board';
-import { setTimer, resetTimer} from './timer'
 
 export const FRUITS = {
     'apple': '🍎',
@@ -19,8 +18,8 @@ class Game {
         this.board = new Board();
         this.lvl = 1;
         this.streak = 0;
-        this.randomFruits = ''
-        // this.timer = setInterval(setTimer, 1000)
+        this.randomFruits = '';
+        this.timer;
     }
 
     start () {
@@ -28,7 +27,7 @@ class Game {
         this.renderStreak();
         this.addMoveListener();
         this.resetFruits();
-        this.timer = setInterval(setTimer, 1000)
+        this.timer = setInterval(this.setTimer.bind(this), 1000)
         Util.findAllPos()
     };
 
@@ -36,7 +35,7 @@ class Game {
         this.pause();
         this.lvl = 1;
         this.streak = 0;
-        resetTimer();
+        this.resetTimer();
     }
 
     pause() {
@@ -44,7 +43,7 @@ class Game {
     }
 
     unPause() {
-        this.timer = setInterval(setTimer, 1000);
+        this.timer = setInterval(this.setTimer.bind(this), 1000);
     }
 
     win (target, current) {
@@ -109,6 +108,24 @@ class Game {
             fruit.remove()
         })
     };
+
+    setTimer() {
+        let timer = document.getElementById('timer');
+        let num = parseInt(timer.innerText)
+        if (num > 0) {
+            timer.innerText = (num - 1)
+        } else {
+            let modal = document.getElementById('go-modal')
+            modal.style.display = 'block'
+            this.resetTimer();
+        }
+    }
+    
+    resetTimer () {
+        clearInterval(this.timer)
+        let timer = document.getElementById('timer');
+        timer.innerText = 60
+    }
 
     move(e) {
         let moveBy = 25
