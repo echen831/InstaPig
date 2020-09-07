@@ -140,8 +140,9 @@ class Game {
         let moveBy = 25
 
         if (e.keyCode === 37 || e.keyCode === 65) {
+            circle.style.backgroundImage = "url('./assets/piggy_left.png')";
             if (parseInt(circle.style.left) - 25 > 0) {
-                circle.style.left = parseInt(circle.style.left) - moveBy
+                circle.style.left = parseInt(circle.style.left) - moveBy;
             } else {
                 circle.style.left = 0
             }
@@ -149,6 +150,7 @@ class Game {
         };
 
         if (e.keyCode === 39 || e.keyCode === 68) {
+            circle.style.backgroundImage = "url('./assets/piggy_right.png')";
             if (parseInt(circle.style.left) + 25 < 400) {
                 circle.style.left = parseInt(circle.style.left) + moveBy
             } else {
@@ -160,6 +162,7 @@ class Game {
         if (e.keyCode === 38 || e.keyCode === 87) {
             if (parseInt(circle.style.top) - 25 > 0) {
                 circle.style.top = parseInt(circle.style.top) - moveBy
+                
             } else {
                 circle.style.top = 0
             }
