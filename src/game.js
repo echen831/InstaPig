@@ -115,8 +115,10 @@ class Game {
         if (num > 0) {
             timer.innerText = (num - 1)
         } else {
-            let modal = document.getElementById('go-modal')
-            modal.style.display = 'block'
+            let goModal = document.getElementById('go-modal')
+            goModal.style.display = 'block'
+            let closeBtn = document.getElementById('closeBtn')
+            closeBtn.addEventListener('click', () => { goModal.style.display = 'none'})
             this.resetTimer();
         }
     }
