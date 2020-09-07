@@ -166,10 +166,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white;
-    margin: 20% auto;
+    background-color: rgb(224, 220, 161);
+    margin: 10% auto;
     padding: 20px;
     width: 70%;
+    border-radius: .5em;
     box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0, 0, 0.17);
 }
 
@@ -203,7 +204,18 @@ body {
 }
 
 .instruction {
+    display: flex;
+    justify-content: center;
     width: 10em;
+    padding-bottom: 1em;
+
+}
+
+.instruction-img {
+    width: 10em;
+    height: 12em;
+    border-radius: .25em;
+    box-shadow: 0 0 10px;
 }
 
 /* Modal End */
