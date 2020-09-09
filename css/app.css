@@ -92,13 +92,17 @@ body {
 .streak-outer {
     color: crimson;
     background-color: rgb(255, 183, 197);
-    top: 400px;
+    top: 100px;
+    left: 900px;
+    width: 100px;
 }
 
 .timer-outer {
     color: rgb(0, 0, 0);
     background-color: lightsteelblue;
-    top: 300px;
+    top: 100px;
+    left: 800px;
+    width: 100px;
 }
 
 #timer, #streak {
