@@ -50,8 +50,6 @@ body {
 }
 
 .basket-outer, .target, .streak-outer, .timer-outer, .instructions {
-    background-color: lightgreen;
-    color: darkkhaki;
     display: flex;
     position: absolute;
     flex-direction: column;
@@ -59,8 +57,6 @@ body {
     width: 150px;
     height: 100px;
     border: 1px solid black;
-    left: 150px;
-    top: 200px;
     border-radius: 15px;
 }
 
@@ -71,9 +67,9 @@ body {
 
 .basket, .target-basket{
     display: flex;
+    flex-direction: column;
     position: absolute;
     list-style: none;
-    flex-wrap: wrap;
     overflow-y: auto;
     top: 35px;
     
@@ -102,10 +98,18 @@ body {
     background-color: rgb(208, 255, 196);
     color: rgb(68, 218, 38);
     top: 100px;
+    left: 125px;
+    width: 5em;
+    height: 26em;
 }
 
 .basket-outer {
-    top: 320px;
+    left: 220px;
+    top: 100px;
+    color: green;
+    background-color: lightsalmon;
+    width: 5em;
+    height: 26em;
 }
 
 .streak-outer {
@@ -135,6 +139,7 @@ body {
     width: 220px;
     height: 300px;
     color: darkblue;
+    background-color: lightseagreen;
 }
 
 .instructions span {

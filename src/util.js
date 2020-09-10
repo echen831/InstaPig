@@ -43,8 +43,6 @@ export const createPos = (current) => {
 
 export const checkUnique = (current, pos) => {
 
-    if (!current.length) return true
-
     for(let i = 0; i < current.length; i ++) {
         let ele = current[i]
 
@@ -134,8 +132,8 @@ export const replaceFruit = (str) => {
     let fruit = document.getElementById(str);
 
     let pos = createPos(current)
-    fruit.style.top = pos[0];
-    fruit.style.left = pos[1];
+    fruit.style.left = pos[0];
+    fruit.style.top = pos[1];
 }
 
 export const placeFruits = () => {
