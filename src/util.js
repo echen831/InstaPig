@@ -57,6 +57,10 @@ export const checkUnique = (current, pos) => {
 
 export const addList = (str) => {
     let basket = document.getElementById('basket')
+    if(basket.children.length > 14) {
+        return
+    }
+    
     let list = document.createElement('li')
     list.setAttribute('class', 'fruit-list')
     let fruit = document.createTextNode(str)
