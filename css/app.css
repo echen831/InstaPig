@@ -18,15 +18,21 @@ body {
 }
 .outer-board {
     position: absolute;
+    border: 1px solid black;
+    background-color: rgb(250, 223, 189);
+    border-radius: 15px;
+    top: 100px;
+    left: 350px;
+    padding: 10px;
 }
 .board {
     display: block;
     position: relative;
-    border: 1px solid black;
+    /* border: 1px solid black;
     background-color: rgb(250, 223, 189);
     border-radius: 15px;
     left: 350px;
-    top: 100px;
+    top: 100px; */
 }
 
 .circle {
@@ -56,15 +62,22 @@ body {
     border-radius: 15px;
 }
 
+.basket-outer, .target {
+    height: 200px;  
+}
+
 
 .basket, .target-basket{
     display: flex;
     position: absolute;
     list-style: none;
     flex-wrap: wrap;
+    overflow-y: auto;
     top: 35px;
     
 }
+
+
 
 .fruit {
     display: flex;
@@ -89,11 +102,15 @@ body {
     top: 100px;
 }
 
+.basket-outer {
+    top: 320px;
+}
+
 .streak-outer {
     color: crimson;
     background-color: rgb(255, 183, 197);
     top: 100px;
-    left: 900px;
+    left: 920px;
     width: 100px;
 }
 
@@ -101,7 +118,7 @@ body {
     color: rgb(0, 0, 0);
     background-color: lightsteelblue;
     top: 100px;
-    left: 800px;
+    left: 820px;
     width: 100px;
 }
 
@@ -111,8 +128,8 @@ body {
 
 
 .instructions {
-    top: 200px;
-    left: 800px;
+    top: 220px;
+    left: 820px;
     width: 200px;
     height: 300px;
     color: darkblue;
