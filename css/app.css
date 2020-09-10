@@ -110,7 +110,7 @@ body {
     color: crimson;
     background-color: rgb(255, 183, 197);
     top: 100px;
-    left: 920px;
+    left: 940px;
     width: 100px;
 }
 
@@ -130,7 +130,7 @@ body {
 .instructions {
     top: 220px;
     left: 820px;
-    width: 200px;
+    width: 220px;
     height: 300px;
     color: darkblue;
 }
