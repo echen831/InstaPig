@@ -9,6 +9,14 @@ export const removeLastFruit = () => {
 
 }
 
+export const removeFirstFruit = () => {
+    let fruit = document.querySelector('.fruit-list:first-child');
+
+    if(fruit) {
+        fruit.remove();
+    }
+}
+
 export const removeAllFruit = () => {
     let fruits = document.querySelectorAll('.fruit-list');
     fruits.forEach(fruit => {
@@ -58,7 +66,7 @@ export const checkUnique = (current, pos) => {
 export const addList = (str) => {
     let basket = document.getElementById('basket')
     if(basket.children.length > 9) {
-        return
+        removeFirstFruit()
     }
     
     let list = document.createElement('li')
