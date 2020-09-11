@@ -57,7 +57,7 @@ export const checkUnique = (current, pos) => {
 
 export const addList = (str) => {
     let basket = document.getElementById('basket')
-    if(basket.children.length > 14) {
+    if(basket.children.length > 9) {
         return
     }
     

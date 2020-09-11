@@ -10,7 +10,21 @@ body {
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.game-content {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .title {
     position: absolute;
     font-size: 50px;
@@ -18,23 +32,29 @@ body {
     text-shadow: 2px 2px #000000;
     left: 450px;
 }
+
+.main-controls {
+    margin: .5em;
+}
+
+.score-time {
+    display: flex;
+}
 .outer-board {
-    position: absolute;
     border: 1px solid black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(250, 223, 189);
     border-radius: 15px;
-    top: 100px;
-    left: 350px;
-    padding: 10px;
+    padding: 20px;
+    width: 400px;
+    height: 400px;
 }
 .board {
-    display: block;
-    position: relative;
-    /* border: 1px solid black;
-    background-color: rgb(250, 223, 189);
-    border-radius: 15px;
-    left: 350px;
-    top: 100px; */
+    display: flex;
+    position: absolute;
 }
 
 .circle {
@@ -51,13 +71,13 @@ body {
 
 .basket-outer, .target, .streak-outer, .timer-outer, .instructions {
     display: flex;
-    position: absolute;
     flex-direction: column;
     align-items: center;
     width: 150px;
     height: 100px;
     border: 1px solid black;
     border-radius: 15px;
+    margin: .5em;
 }
 
 .basket-outer, .target {
@@ -68,11 +88,9 @@ body {
 .basket, .target-basket{
     display: flex;
     flex-direction: column;
-    /* position: absolute; */
     list-style: none;
-    max-height: 23.5em;
+    max-height: 18em;
     overflow-y: auto;
-    top: 35px;
     
 }
 
@@ -98,39 +116,33 @@ body {
 .target {
     background-color: rgb(208, 255, 196);
     color: rgb(68, 218, 38);
-    top: 100px;
-    left: 125px;
     width: 5em;
-    height: 26em;
+    height: 18em;
 }
 
 .basket-outer {
-    left: 220px;
-    top: 100px;
     color: green;
     background-color: lightsalmon;
     width: 5em;
-    height: 26em;
+    height: 18em;
 }
 
 .streak-outer {
     color: crimson;
     background-color: rgb(255, 183, 197);
-    top: 100px;
-    left: 940px;
-    width: 100px;
+    width: 5em;
+    height: 4.5em;
 }
 
 .timer-outer {
     color: rgb(0, 0, 0);
     background-color: lightsteelblue;
-    top: 100px;
-    left: 820px;
-    width: 100px;
+    width: 5em;
+    height: 4.5em;
 }
 
 #timer, #streak {
-    font-size: 40px;
+    font-size: 35px;
 }
 
 
@@ -148,11 +160,12 @@ body {
 }
 
 .sound-container {
-    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    top: 225px;
+    border: 1px solid black;
+    background-color: lightblue;
+    border-radius: 15px;
 }
 
 .sound-container p {
@@ -224,7 +237,7 @@ body {
     cursor: pointer;
 }
 
-#go-modal, #wo-modal{
+#go-modal, #wo-modal {
     display: none;
 }
 
@@ -233,7 +246,6 @@ body {
 }
 
 #wo-modal-content {
-    position: relative;
     border: rgba(255, 255, 255, 0);
     background-color: rgba(255, 255, 255, 0);
     box-shadow: none;

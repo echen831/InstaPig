@@ -38,54 +38,63 @@
             </div>
         </div>
     </div>
-    <div class='outer-board'>
-        <div id='board' class='board'>
-            <div id='circle' class='circle' style="background-image: url(./assets/piggy_left.png);">
+    <div class='game-content'>
 
+        <div class='main-controls'>
+            <div class='score-time'>
+                <div>
+                    <div id='timer-outer' class='timer-outer'>
+                        <p>Time</p>
+                        <p id='timer'>60</p>
+                    </div>
+                    <div id='target' class='target'>
+                        <p>Order</p>
+                        <ul id='target-basket' class='target-basket'>
+            
+                        </ul>
+                    </div>
+                </div>
+    
+                <div>
+                    <div id='streak-outer' class='streak-outer'>
+                        <p>Score</p>
+                        <p id='streak' class='streak'>0</p>
+                    </div>
+                    <div id='basket-outer' class='basket-outer'>
+                        <p>Cart</p>
+                        <ul id='basket' class='basket'>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        
+            <div class='sound-container'>
+                <p>Music</p>
+                <div class='audio-controls'>
+                    <p onclick="document.getElementById('player').play()"><i class="fas fa-play"></i></p>
+                    <p onclick="document.getElementById('player').pause()"><i class="fas fa-pause"></i></p>
+                    <p onclick="document.getElementById('player').volume += 0.1"><i class="fas fa-volume-up"></i></p>
+                    <p onclick="document.getElementById('player').volume -= 0.1"><i class="fas fa-volume-down"></i></p>
+                </div>
+            </div>
         </div>
-    </div>
-
-    <div id='target' class='target'>
-        <p>Order</p>
-        <ul id='target-basket' class='target-basket'>
-
-        </ul>
-    </div>
+        
+        <div class='outer-board'>
+            <div id='board' class='board'>
+                <div id='circle' class='circle' style="background-image: url(./assets/piggy_left.png);">
     
-    <div id='basket-outer' class='basket-outer'>
-        <p>Cart</p>
-        <ul id='basket' class='basket'>
-    
-        </ul>
-    </div>
-
-     <div id='streak-outer' class='streak-outer'>
-        <p>Streak</p>
-        <p id='streak' class='streak'>0</p>
-    </div>
-
-    <div id='timer-outer' class='timer-outer'>
-        <p>Time Left</p>
-        <p id='timer'>60</p>
-    </div>
-
-    <div class='instructions'>
-        <span>Controls</span>
-        <span>Start/Reset: SpaceBar</span>
-        <span>Move: ←↑→↓/wasd</span>
-        <span>Submit Order: Enter</span>
-        <span>Remove Item: Option/Alt</span>
-        <span>Reset Position: Shift</span>
-        <div class='sound-container'>
-            <p>Music</p>
-            <div class='audio-controls'>
-                <p onclick="document.getElementById('player').play()"><i class="fas fa-play"></i></p>
-                <p onclick="document.getElementById('player').pause()"><i class="fas fa-pause"></i></p>
-                <p onclick="document.getElementById('player').volume += 0.1"><i class="fas fa-volume-up"></i></p>
-                <p onclick="document.getElementById('player').volume -= 0.1"><i class="fas fa-volume-down"></i></p>
+                </div>
+            
             </div>
+        </div>
+    
+    
+        <div class='instructions'>
+            <span>Controls</span>
+            <span>Start/Reset: SpaceBar</span>
+            <span>Move: ←↑→↓/wasd</span>
+            <span>Submit Order: Enter</span>
+            <span>Remove Item: Option/Alt</span>
+            <span>Reset Position: Shift</span>
         </div>
     </div>
     <div id='go-modal' class='modal'>
