@@ -33,9 +33,9 @@ document.addEventListener('DOMContentLoaded', ()=> {
             game.win(game.randomFruits, currFruits);
         }
 
-        if (e.keyCode === 16) {
-            game.resetFruits()
-        }
+        // if (e.keyCode === 16) {
+        //     game.resetFruits()
+        // }
 
         if (e.keyCode === 18) {
             Util.removeLastFruit();
