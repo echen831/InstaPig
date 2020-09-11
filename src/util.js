@@ -115,6 +115,23 @@ export const addFruit = () => {
         addList('🍒');
         replaceFruit('cherry');
     }
+    if ((circle.style.left === peach.style.left) && (circle.style.top === peach.style.top)) {
+        addList('🍑');
+        replaceFruit('peach');
+    }
+    if ((circle.style.left === pear.style.left) && (circle.style.top === pear.style.top)) {
+        addList('🍐');
+        replaceFruit('pear');
+    }
+    if ((circle.style.left === kiwi.style.left) && (circle.style.top === kiwi.style.top)) {
+        addList('🥝');
+        replaceFruit('kiwi');
+    }
+    if ((circle.style.left === melon.style.left) && (circle.style.top === melon.style.top)) {
+        addList('🍈');
+        replaceFruit('melon');
+    }
+
 }
 
 export const addFruits = (fruits) => {
