@@ -224,7 +224,7 @@ body {
     cursor: pointer;
 }
 
-#go-modal {
+#go-modal, #wo-modal{
     display: none;
 }
 

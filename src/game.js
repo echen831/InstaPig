@@ -55,12 +55,18 @@ class Game {
 
         if (win) {
             this.increaseLevel()
-        } 
-        else {
-            this.streak = 0
+        } else {
+            this.streak = this.streak > 0 ? this.streak -= 1 : 0;
             this.renderStreak()
-            alert('wrong order')
+            Util.removeAllFruit()
+            this.wrongModal('block')
+            setTimeout(this.wrongModal.bind(this), 500)
         };
+    };
+
+    wrongModal(str = 'none') {
+        let wo = document.getElementById('wo-modal')
+        wo.style.display = `${str}`
     };
 
     increaseLevel() {
