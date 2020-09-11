@@ -59,7 +59,7 @@ class Game {
         else {
             this.streak = 0
             this.renderStreak()
-            alert('keep trying')
+            alert('wrong order')
         };
     };
 
