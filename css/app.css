@@ -29,7 +29,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    font-size: 3em;
+    font-size: 3.5em;
     color: rgb(226, 155, 194);
     text-shadow: 2px 2px #000000;
     display: flex;
@@ -42,16 +42,27 @@ body {
     bottom: 0;
     width: 100%;
     font-size: 3em;
-    color: rgb(226, 155, 194);
-    text-shadow: 2px 2px #000000;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.footer img {
+.footer div {
+    display: flex;
+}
+
+.footer img, .footer i {
     width: 1em;
     height: 1em;
+    margin: .25em;
+}
+
+.footer i {
+    opacity: .7;
+}
+
+.footer i:hover {
+    opacity: 1;
 }
 
 .main-controls {
