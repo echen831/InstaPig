@@ -57,6 +57,34 @@ export const checkUnique = (current, pos) => {
         if(pos[0] === ele[0] && pos[1] === ele[1]) {
             return false
         }
+
+        if (pos[0] === ele[0] + 25 && pos[1] === ele[1]) {
+            return false
+        }
+
+        if (pos[0] === ele[0] - 25 && pos[1] === ele[1]) {
+            return false
+        }
+
+        if (pos[0] === ele[0] && pos[1] === ele[1] + 25) {
+            return false
+        }
+
+        if (pos[0] === ele[0] && pos[1] === ele[1] - 25) {
+            return false
+        }
+        if (pos[0] === ele[0] + 25 && pos[1] === ele[1] + 25) {
+            return false
+        }
+        if (pos[0] === ele[0] + 25 && pos[1] === ele[1] - 25) {
+            return false
+        }
+        if (pos[0] === ele[0] - 25 && pos[1] === ele[1] - 25) {
+            return false
+        }
+        if (pos[0] === ele[0] - 25 && pos[1] === ele[1] + 25) {
+            return false
+        }
     }
 
     return true
