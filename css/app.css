@@ -19,17 +19,24 @@ body {
     position: relative;
     width: 80%;
     height: 75%;
-    background-color: rgba(255, 255, 255, 0.562);
+    background-color: rgba(255, 255, 255, 0);
     display: flex;
     justify-content: center;
 }
 
 .title {
-    color: rgb(167, 51, 115);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 3em;
+    color: rgb(226, 155, 194);
     text-shadow: 2px 2px #000000;
-    z-index: 1;
-    background-color: darkgoldenrod;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 
 .main-controls {
     margin: .5em;
