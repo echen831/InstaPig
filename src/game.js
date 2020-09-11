@@ -78,13 +78,20 @@ class Game {
 
     increaseLevel() {
         this.streak ++
-        this.lvl ++
+        if (this.lvl === 10) {
+            this.lvl = 10
+        } else {
+            this.lvl ++
+        }
         this.resetFruits();
         this.renderStreak();
+        this.addTime();
     }
 
     addTime() {
-
+        let timer = document.getElementById('timer');
+        let num = parseInt(timer.innerText)
+        timer.innerText = num + Math.ceil(this.lvl/2)
     }
 
     renderStreak() {
