@@ -228,6 +228,22 @@ body {
     display: none;
 }
 
+#wo-modal {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#wo-modal-content {
+    position: relative;
+    border: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: none;
+}
+
+#wo-msg {
+    color: red;
+    font-size: xx-large;
+}
+
 .instruction-content {
     display: flex;
 }
