@@ -131,6 +131,18 @@ export const addFruit = () => {
         addList('🍈');
         replaceFruit('melon');
     }
+    if ((circle.style.left === lemon.style.left) && (circle.style.top === lemon.style.top)) {
+        addList('🍋');
+        replaceFruit('lemon');
+    }
+    if ((circle.style.left === coco.style.left) && (circle.style.top === coco.style.top)) {
+        addList('🥥');
+        replaceFruit('coco');
+    }
+    if ((circle.style.left === green.style.left) && (circle.style.top === green.style.top)) {
+        addList('🍏');
+        replaceFruit('green');
+    }
 
 }
 

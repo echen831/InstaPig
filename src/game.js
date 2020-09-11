@@ -13,7 +13,10 @@ export const FRUITS = {
     'peach':'🍑',
     'pear':'🍐',
     'kiwi':'🥝',
-    'melon':'🍈'
+    'melon':'🍈',
+    'lemon':'🍋',
+    'coco':'🥥',
+    'green':'🍏'
 }
 
 class Game {
