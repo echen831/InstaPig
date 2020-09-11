@@ -187,6 +187,23 @@ body {
     background-color: lightseagreen;
 }
 
+.leader-board {
+    display: flex;
+    margin: 1em .5em 1em .5em;
+    flex-direction: column;
+    width: 13em;
+    height: 14.5em;
+    color: darkcyan;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 1em;
+    background-color: rgb(155, 238, 12);
+}
+
+.leader-board:last-child {
+    bottom: 0;
+}
+
 .sound-container {
     display: flex;
     flex-direction: column;
