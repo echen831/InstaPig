@@ -37,6 +37,22 @@ body {
     align-items: center;
 }
 
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 3em;
+    color: rgb(226, 155, 194);
+    text-shadow: 2px 2px #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer img {
+    width: 1em;
+    height: 1em;
+}
 
 .main-controls {
     margin: .5em;
