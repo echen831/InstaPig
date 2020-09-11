@@ -91,7 +91,7 @@ class Game {
     addTime() {
         let timer = document.getElementById('timer');
         let num = parseInt(timer.innerText)
-        timer.innerText = num + Math.ceil(this.lvl/2)
+        timer.innerText = num + this.lvl
     }
 
     renderStreak() {
