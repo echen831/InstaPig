@@ -1,6 +1,5 @@
 import * as Util from './util';
 import Game from './game';
-import { FRUITS } from './game';
 
 
 console.log('webpack is working');
@@ -23,7 +22,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
     // game.start();
     let audio = document.getElementById('audio');
 
-    
+    Util.setLeader();
     
     
 

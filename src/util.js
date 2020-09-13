@@ -1,3 +1,23 @@
+const LEADERS = [
+    { name: 'Warthog', score: '10' },
+    { name: 'Pot-bellied', score: '9' },
+    { name: 'Berkshire', score: '8' },
+    { name: 'Kunekune', score: '7' },
+    { name: 'Hamshire', score: '6' },
+    { name: 'Hereford', score: '5' }
+
+];
+
+
+export const setLeader = () => {
+    let list = document.getElementById('lb-list')
+    LEADERS.forEach((leader, idx) => {
+        let str = `${idx+1}. ${leader.name} ----- ${leader.score}`;
+        let item = document.createElement('li');
+        item.innerText = str;
+        list.appendChild(item);
+    })
+}
 
 export const removeLastFruit = () => {
 
