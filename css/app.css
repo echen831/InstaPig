@@ -29,13 +29,19 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    font-size: 3.5em;
+    height: 10%;
+    font-size: 3.75em;
     color: rgb(226, 155, 194);
     text-shadow: 2px 2px #000000;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.title p {
+    padding-right: 1em ;
+}
+
 
 .footer {
     position: fixed;
