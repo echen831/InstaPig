@@ -53,7 +53,7 @@ class Game {
         this.timer = setInterval(this.setTimer.bind(this), 1000);
     }
 
-    win (target, current) {
+    win(target, current) {
         let win = false
 
         if (target.join(" ") === current.replace(/\n/g, " ")) {
@@ -62,7 +62,8 @@ class Game {
 
         if (win) {
             this.increaseLevel()
-        } else {
+        }
+        else {
             this.streak = this.streak > 0 ? this.streak -= 1 : 0;
             this.renderStreak()
             Util.removeAllFruit()
@@ -195,7 +196,7 @@ class Game {
             } else {
                 circle.style.top = (400 - 25)
             }
-            Util.addFruit()      
+            Util.addFruit()    
         }
 
     }
