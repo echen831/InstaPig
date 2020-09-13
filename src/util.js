@@ -1,6 +1,6 @@
 const LEADERS = [
     { name: 'Warthog', score: '10' },
-    { name: 'Pot-bellied', score: '9' },
+    { name: 'Tea-cup', score: '9' },
     { name: 'Berkshire', score: '8' },
     { name: 'Kunekune', score: '7' },
     { name: 'Hamshire', score: '6' },
