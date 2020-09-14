@@ -21,6 +21,13 @@ export const setLeader = () => {
     })
 };
 
+export const updateLeader = (name, score) => {
+    LEADERS.push({name, score});
+    let list = document.getElementById('lb-list');
+    list.innerHTML = '';
+    setLeader();
+};
+
 export const removeLastFruit = () => {
 
     let fruit = document.querySelector('.fruit-list:last-child');

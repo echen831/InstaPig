@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
     Util.setLeader();
     
-    
 
     document.addEventListener('keydown', (e)=>{
         if (e.keyCode === 13) {
