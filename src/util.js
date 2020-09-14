@@ -1,23 +1,25 @@
 const LEADERS = [
-    { name: 'Warthog', score: '10' },
-    { name: 'Tea-cup', score: '9' },
-    { name: 'Berkshire', score: '8' },
-    { name: 'Kunekune', score: '7' },
-    { name: 'Hamshire', score: '6' },
-    { name: 'Hereford', score: '5' }
+    { name: 'Warthog', score: 1 },
+    { name: 'Tea-cup', score: 9 },
+    { name: 'Berkshire', score: 10 },
+    { name: 'Kunekune', score: 4 },
+    { name: 'Hamshire', score: 7 },
+    { name: 'Hereford', score: 3 }
 
 ];
 
 
 export const setLeader = () => {
+
+    let leaders = LEADERS.sort((a,b) => (b.score - a.score)).slice(0,5)
     let list = document.getElementById('lb-list')
-    LEADERS.forEach((leader, idx) => {
+    leaders.forEach((leader, idx) => {
         let str = `${idx+1}. ${leader.name} ----- ${leader.score}`;
         let item = document.createElement('li');
         item.innerText = str;
         list.appendChild(item);
     })
-}
+};
 
 export const removeLastFruit = () => {
 
@@ -26,8 +28,7 @@ export const removeLastFruit = () => {
     if (fruit) {
         fruit.remove();
     }
-
-}
+};
 
 export const removeFirstFruit = () => {
     let fruit = document.querySelector('.fruit-list:first-child');
