@@ -142,13 +142,18 @@ class Game {
     }
 
     endGame () {
-        let goModal = document.getElementById('go-modal')
-        goModal.style.display = 'block'
-        let goCloseBtn = document.getElementById('go-closeBtn')
-        goCloseBtn.addEventListener('click', () => { goModal.style.display = 'none' })
-        let score = document.getElementById('streak')
-        let finalScore = document.getElementById('final-score')
-        finalScore.innerText = score.innerText 
+        document.removeEventListener('keydown', this.move);
+        let goModal = document.getElementById('go-modal');
+        goModal.style.display = 'block';
+        let goCloseBtn = document.getElementById('go-closeBtn');
+        goCloseBtn.addEventListener('click', () => { goModal.style.display = 'none' });
+        let score = document.getElementById('streak').innerText;
+        let finalScore = document.getElementById('final-score');
+        finalScore.innerText = score;
+
+        let input = document.getElementById('name-input').value;
+        let submit = document.getElementById('name-submit');
+        submit.addEventListener('click', () => {console.log(score)})
     }
     
     resetTimer () {

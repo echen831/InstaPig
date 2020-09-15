@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', ()=> {
     let audio = document.getElementById('audio');
 
     Util.setLeader();
-    
 
     document.addEventListener('keydown', (e)=>{
         if (e.keyCode === 13) {
