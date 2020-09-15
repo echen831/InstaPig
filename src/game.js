@@ -153,10 +153,17 @@ class Game {
         let score = document.getElementById('streak').innerText;
         let finalScore = document.getElementById('final-score');
         finalScore.innerText = score;
+        let btn = document.getElementById('name-submit')
+        btn.addEventListener('click', () => this.addToLeader(score,goModal))
+    }
 
-        let input = document.getElementById('name-input').value;
-        let submit = document.getElementById('name-submit');
-        submit.addEventListener('click', () => {console.log(score)})
+    addToLeader (score, modal) {
+        let i = document.getElementById('name-input').value;
+        if (!i.length) {
+            i = 'Mystery Pig'
+        }
+        Util.updateLeader(i, score);
+        modal.style.display = 'none';
     }
     
     resetTimer () {
