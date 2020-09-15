@@ -40,6 +40,9 @@ class Game {
 
     reset () {
         this.pause();
+        let circle = document.getElementById('circle');
+        circle.style.left = 200;
+        circle.style.top = 200;
         this.lvl = 1;
         this.streak = 0;
         this.resetTimer();
