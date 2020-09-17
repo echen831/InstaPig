@@ -4,14 +4,17 @@ const LEADERS = [
     { name: 'Berkshire', score: 10 },
     { name: 'Kunekune', score: 4 },
     { name: 'Hamshire', score: 7 },
-    { name: 'Hereford', score: 3 }
-
+    { name: 'Hereford', score: 5 },
+    { name: 'Mulefoot', score: 6 },
+    { name: 'Guinea', score: 8 },
+    { name: 'Gottingen', score: 2 },
+    { name: 'Bentheim', score: 3 }
 ];
 
 
 export const setLeader = () => {
 
-    let leaders = LEADERS.sort((a,b) => (b.score - a.score)).slice(0,5)
+    let leaders = LEADERS.sort((a,b) => (b.score - a.score)).slice(0,8)
     let list = document.getElementById('lb-list')
     leaders.forEach((leader, idx) => {
         let str = `${idx+1}. ${leader.name} ----- ${leader.score}`;
