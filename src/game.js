@@ -92,7 +92,7 @@ class Game {
         this.resetFruits();
         this.renderStreak();
         this.addTime();
-    }
+    };
 
     addTime() {
         let timer = document.getElementById('timer');
@@ -108,6 +108,7 @@ class Game {
     addMoveListener () {
         document.addEventListener('keydown', this.move);
     };
+
 
     resetFruits() {
         this.randomFruits = Util.randomFruit(Object.values(FRUITS), this.lvl);

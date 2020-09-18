@@ -289,6 +289,39 @@ export const findAllPos = () => {
     return res
 }
 
+export const addControls = () => {
+    document.addEventListener('keydown', setControls)
+}
+
+export const setControls = (e) => {
+
+    if (e.keyCode === 13) {
+        let currFruits = document.getElementById('basket').innerText;
+        game.win(game.randomFruits, currFruits);
+    }
+
+    if (e.keyCode === 16) {
+        game.resetFruits()
+    }
+
+    if (e.keyCode === 18) {
+        Util.removeLastFruit();
+    }
+
+    if (e.keyCode === 32) {
+        game.start();
+    }
+
+    if (e.keyCode === 86) {
+        game.pause();
+    }
+
+    if (e.keyCode === 66) {
+        game.unPause();
+    }
+
+}
+
 
 
 
