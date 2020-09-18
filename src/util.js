@@ -17,12 +17,27 @@ export const setLeader = () => {
     let leaders = LEADERS.sort((a,b) => (b.score - a.score)).slice(0,8)
     let list = document.getElementById('lb-list')
     leaders.forEach((leader, idx) => {
-        let str = `${idx+1}. ${leader.name} ----- ${leader.score}`;
+        // let str = `${idx+1}. ${leader.name} ----- ${leader.score}`;
+        let str = setString(idx, leader.name, leader.score);
         let item = document.createElement('li');
         item.innerText = str;
+        item.style.color = 'red';
         list.appendChild(item);
     })
 };
+
+const setString = (idx, name, score) => {
+    let str = `${idx+1}. `
+    let dashLength = 15 - (name.length);
+    str = str.concat(name + " ");
+
+    while(dashLength > 0) {
+        str = str.concat("-");
+        dashLength --;
+    }
+    str = str.concat(" " + score)
+    return str
+}   
 
 export const updateLeader = (name, score) => {
     LEADERS.push({name, score});
