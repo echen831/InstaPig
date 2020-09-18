@@ -21,7 +21,9 @@ export const setLeader = () => {
         let str = setString(idx, leader.name, leader.score);
         let item = document.createElement('li');
         item.innerText = str;
-        item.style.color = 'red';
+        if (leader.color) {
+            item.style.color = leader.color;
+        }
         list.appendChild(item);
     })
 };
@@ -40,7 +42,7 @@ const setString = (idx, name, score) => {
 }   
 
 export const updateLeader = (name, score) => {
-    LEADERS.push({name, score});
+    LEADERS.push({name, score, color: 'red'});
     let list = document.getElementById('lb-list');
     list.innerHTML = '';
     setLeader();
