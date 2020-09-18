@@ -43,6 +43,8 @@ class Game {
         let circle = document.getElementById('circle');
         circle.style.left = 200;
         circle.style.top = 200;
+        let lb = document.getElementById('submit-leader-board');
+        lb.style.display = 'none';
         this.lvl = 1;
         this.streak = 0;
         this.resetTimer();
@@ -153,8 +155,13 @@ class Game {
         let score = document.getElementById('streak').innerText;
         let finalScore = document.getElementById('final-score');
         finalScore.innerText = score;
-        let btn = document.getElementById('name-submit')
-        btn.addEventListener('click', () => this.addToLeader(score,goModal))
+        let leaderBoard = document.getElementById('lb-list');
+        if (score >= leaderBoard.lastChild.innerText.slice(leaderBoard.lastChild.innerText.length-1)) {
+            let submit = document.getElementById('submit-leader-board');
+            submit.style.display = 'flex';
+            let btn = document.getElementById('name-submit')
+            btn.addEventListener('click', () => this.addToLeader(score,goModal))
+        }
     }
 
     addToLeader (score, modal) {

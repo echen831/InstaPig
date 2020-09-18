@@ -225,6 +225,10 @@ body {
     list-style: none;
 }
 
+#submit-leader-board {
+    display: none;
+}
+
 .sound-container {
     display: flex;
     flex-direction: column;
