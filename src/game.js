@@ -240,7 +240,11 @@ class Game {
 
         if (e.keyCode === 16) {
             this.resetFruits();
-        } 
+        }; 
+
+        if (e.keyCode === 18) {
+            Util.removeLastFruit();
+        };
     }
 
 };
