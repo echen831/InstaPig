@@ -15,15 +15,14 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
     const closeModal = () => {
         modal.style.display = 'none';
-        game.addControlListener();
+        document.addEventListener('keydown', (e) => Util.controls(e,game))
     }
 
     closeBtn.addEventListener('click', closeModal);
-
-    // game.start();
     let audio = document.getElementById('audio');
 
     Util.setLeader();
+
 
     // document.addEventListener('keydown', (e)=>{
     //     if (e.keyCode === 13) {

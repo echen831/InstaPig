@@ -109,9 +109,9 @@ class Game {
         document.addEventListener('keydown', this.move);
     };
 
-    addControlListener () {
-        document.addEventListener('keydown', this.controls);
-    }
+    // addControlListener () {
+    //     document.addEventListener('keydown', this.controls);
+    // }
 
 
     resetFruits() {
@@ -153,11 +153,10 @@ class Game {
 
     endGame () {
         document.removeEventListener('keydown', this.move);
-        document.removeEventListener('keydown', this.controls);
         let goModal = document.getElementById('go-modal');
         goModal.style.display = 'block';
         let goCloseBtn = document.getElementById('go-closeBtn');
-        goCloseBtn.addEventListener('click', () => { goModal.style.display = 'none'; this.addControlListener() });
+        goCloseBtn.addEventListener('click', () => { goModal.style.display = 'none' });
         let score = document.getElementById('streak').innerText;
         let finalScore = document.getElementById('final-score');
         finalScore.innerText = score;
@@ -177,7 +176,6 @@ class Game {
         }
         Util.updateLeader(i, score);
         modal.style.display = 'none';
-        this.addControlListener();
     }
     
     resetTimer () {
@@ -230,32 +228,32 @@ class Game {
 
     }
 
-    controls(e) {
-        if (e.keyCode === 32) {
-            this.start()
-        };
+    // controls(e) {
+    //     if (e.keyCode === 32) {
+    //         this.start.bind(this)
+    //     };
 
-        if (e.keyCode === 13) {
-            let currFruits = document.getElementById('basket').innerText;
-            this.win(this.randomFruits, currFruits);
-        };
+    //     if (e.keyCode === 13) {
+    //         let currFruits = document.getElementById('basket').innerText;
+    //         this.win(this.randomFruits, currFruits);
+    //     };
 
-        if (e.keyCode === 16) {
-            this.resetFruits();
-        }; 
+    //     if (e.keyCode === 16) {
+    //         this.resetFruits();
+    //     }; 
 
-        if (e.keyCode === 18) {
-            Util.removeLastFruit();
-        };
+    //     if (e.keyCode === 18) {
+    //         Util.removeLastFruit();
+    //     };
 
-        if (e.keyCode === 88) {
-            this.pause();
-        };
+    //     if (e.keyCode === 88) {
+    //         this.pause();
+    //     };
 
-        if (e.keyCode === 66) {
-            this.unPause();
-        };
-    };
+    //     if (e.keyCode === 66) {
+    //         this.unPause();
+    //     };
+    // };
 
 };
 
