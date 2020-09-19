@@ -236,7 +236,11 @@ class Game {
         if (e.keyCode === 13) {
             let currFruits = document.getElementById('basket').innerText;
             this.win(this.randomFruits, currFruits);
-        }
+        };
+
+        if (e.keyCode === 16) {
+            this.resetFruits();
+        } 
     }
 
 };
