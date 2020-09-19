@@ -153,10 +153,11 @@ class Game {
 
     endGame () {
         document.removeEventListener('keydown', this.move);
+        document.removeEventListener('keydown', this.controls);
         let goModal = document.getElementById('go-modal');
         goModal.style.display = 'block';
         let goCloseBtn = document.getElementById('go-closeBtn');
-        goCloseBtn.addEventListener('click', () => { goModal.style.display = 'none' });
+        goCloseBtn.addEventListener('click', () => { goModal.style.display = 'none'; this.addControlListener() });
         let score = document.getElementById('streak').innerText;
         let finalScore = document.getElementById('final-score');
         finalScore.innerText = score;
@@ -176,6 +177,7 @@ class Game {
         }
         Util.updateLeader(i, score);
         modal.style.display = 'none';
+        this.addControlListener();
     }
     
     resetTimer () {
