@@ -26,10 +26,10 @@ document.addEventListener('DOMContentLoaded', ()=> {
     game.addControlListener();
 
     document.addEventListener('keydown', (e)=>{
-        if (e.keyCode === 13) {
-            let currFruits = document.getElementById('basket').innerText;
-            game.win(game.randomFruits, currFruits);
-        }
+        // if (e.keyCode === 13) {
+        //     let currFruits = document.getElementById('basket').innerText;
+        //     game.win(game.randomFruits, currFruits);
+        // }
 
         if (e.keyCode === 16) {
             game.resetFruits()
