@@ -109,10 +109,6 @@ class Game {
         document.addEventListener('keydown', this.move);
     };
 
-    // addControlListener () {
-    //     document.addEventListener('keydown', this.controls);
-    // }
-
 
     resetFruits() {
         this.randomFruits = Util.randomFruit(Object.values(FRUITS), this.lvl);
@@ -153,6 +149,7 @@ class Game {
 
     endGame () {
         document.removeEventListener('keydown', this.move);
+        document.removeEventListener('keydown', Util.controls);
         let goModal = document.getElementById('go-modal');
         goModal.style.display = 'block';
         let goCloseBtn = document.getElementById('go-closeBtn');
@@ -228,32 +225,7 @@ class Game {
 
     }
 
-    // controls(e) {
-    //     if (e.keyCode === 32) {
-    //         this.start.bind(this)
-    //     };
 
-    //     if (e.keyCode === 13) {
-    //         let currFruits = document.getElementById('basket').innerText;
-    //         this.win(this.randomFruits, currFruits);
-    //     };
-
-    //     if (e.keyCode === 16) {
-    //         this.resetFruits();
-    //     }; 
-
-    //     if (e.keyCode === 18) {
-    //         Util.removeLastFruit();
-    //     };
-
-    //     if (e.keyCode === 88) {
-    //         this.pause();
-    //     };
-
-    //     if (e.keyCode === 66) {
-    //         this.unPause();
-    //     };
-    // };
 
 };
 
