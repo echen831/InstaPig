@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
     let audio = document.getElementById('audio');
 
     Util.setLeader();
+    game.addControlListener();
 
     document.addEventListener('keydown', (e)=>{
         if (e.keyCode === 13) {
@@ -38,9 +39,9 @@ document.addEventListener('DOMContentLoaded', ()=> {
             Util.removeLastFruit();
         } 
         
-        if (e.keyCode === 32) {
-            game.start();
-        }
+        // if (e.keyCode === 32) {
+        //     game.start();
+        // }
 
         if (e.keyCode === 86) {
             game.pause();
