@@ -245,7 +245,15 @@ class Game {
         if (e.keyCode === 18) {
             Util.removeLastFruit();
         };
-    }
+
+        if (e.keyCode === 88) {
+            this.pause();
+        };
+
+        if (e.keyCode === 66) {
+            this.unPause();
+        };
+    };
 
 };
 
