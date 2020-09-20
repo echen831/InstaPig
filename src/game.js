@@ -149,7 +149,6 @@ class Game {
 
     endGame () {
         document.removeEventListener('keydown', this.move);
-        document.removeEventListener('keydown', Util.controls);
         let goModal = document.getElementById('go-modal');
         goModal.style.display = 'block';
         let goCloseBtn = document.getElementById('go-closeBtn');

@@ -4,9 +4,6 @@ import Game from './game';
 
 console.log('webpack is working');
 
-
-
-
 document.addEventListener('DOMContentLoaded', ()=> {
 
     const game = new Game();
@@ -15,14 +12,13 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
     const closeModal = () => {
         modal.style.display = 'none';
-        document.addEventListener('keydown', (e) => Util.controls(e,game))
+        document.addEventListener('keydown', function addControls (e) {Util.controls(e,game)})
     }
 
     closeBtn.addEventListener('click', closeModal);
     let audio = document.getElementById('audio');
 
     Util.setLeader();
-
 
     // document.addEventListener('keydown', (e)=>{
     //     if (e.keyCode === 13) {
