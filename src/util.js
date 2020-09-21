@@ -291,7 +291,7 @@ export const findAllPos = () => {
 
 
 export const controls = (e, game) => {
-
+    
     if (e.keyCode === 13) {
         let currFruits = document.getElementById('basket').innerText;
         game.win(game.randomFruits, currFruits);

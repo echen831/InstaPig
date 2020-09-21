@@ -109,6 +109,10 @@ class Game {
         document.addEventListener('keydown', this.move);
     };
 
+    addControls () {
+        document.addEventListener('keydown', this.controls);
+    }
+
 
     resetFruits() {
         this.randomFruits = Util.randomFruit(Object.values(FRUITS), this.lvl);
@@ -223,7 +227,8 @@ class Game {
             Util.addFruit()    
         }
 
-    }
+    };
+
 
 
 

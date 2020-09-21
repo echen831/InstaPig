@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
     const closeModal = () => {
         modal.style.display = 'none';
-        document.addEventListener('keydown', (e)=>Util.controls(e,game))
+        document.addEventListener('keydown', (e) => Util.controls(e,game))
     }
 
     closeBtn.addEventListener('click', closeModal);
